@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Foomia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides autoplay="1000" loop="true" pager="true" [options]="slideOpts">
+    <ion-slide *ngFor="let slide of slideElements">
+      <img alt="" [src]="'../../assets/slides/'+slide+'.png'" />
+    </ion-slide>
+  </ion-slides>
+
+  <app-products></app-products>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "foomia",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

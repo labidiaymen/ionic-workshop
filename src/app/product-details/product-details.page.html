@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button slot="start"> </ion-back-button>
+      <ion-title>{{currentProduct.name}}</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-img [src]="'../../../assets/products/'+currentProduct.id+'.jpg'"></ion-img>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{currentProduct.name}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label slot="start">{{currentProduct.price}} TND</ion-label>
+    <ion-button (click)="addProductToBasket(currentProduct)" color="primary" slot="end">Add to basket</ion-button>
+  </ion-item>
+  <ion-item padding-vertical>
+    <div [innerHTML]="currentProduct.description_full"></div>
+  </ion-item>
+</ion-content>
